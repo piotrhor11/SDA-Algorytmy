@@ -1,10 +1,9 @@
 import Algorithms.AbstractAlgorithm;
 import Algorithms.PoorCamelCase;
+import Algorithms.SpecialCamelCase;
 import Algorithms.Test;
 
-/**
- * Created by RENT on 2017-07-21.
- */
+
 public class AlgorithmFactory {
     public AbstractAlgorithm getAlgorithm(String name) throws Exception{
         switch(name){
@@ -12,6 +11,8 @@ public class AlgorithmFactory {
                 return new Test();
             case "poorcamelcase":
                 return new PoorCamelCase();
+            case "specialcamelcase":
+                return new SpecialCamelCase();
 
             default:
                     throw new Exception("Nie ma takiego algorytmu");
