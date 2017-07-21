@@ -13,8 +13,8 @@ public class Main {
         String algorithmName = args[0];
 
         AlgorithmFactory factory = new AlgorithmFactory();
-        AbstractAlgorithm algoritm = factory
-                .getAlgorithm(algorithmName);
+        AbstractAlgorithm algorithm = factory.getAlgorithm(algorithmName);
 
+        algorithm.runAlgorithm(args);
     }
 }
