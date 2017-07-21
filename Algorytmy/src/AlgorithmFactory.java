@@ -1,4 +1,5 @@
 import Algorithms.AbstractAlgorithm;
+import Algorithms.PoorCamelCase;
 import Algorithms.Test;
 
 /**
@@ -9,6 +10,9 @@ public class AlgorithmFactory {
         switch(name){
             case "test":
                 return new Test();
+            case "poorcamelcase":
+                return new PoorCamelCase();
+
             default:
                     throw new Exception("Nie ma takiego algorytmu");
         }

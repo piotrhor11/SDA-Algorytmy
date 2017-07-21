@@ -2,10 +2,6 @@ package Algorithms;
 
 public class Test extends AbstractAlgorithm {
 
-    public Test(){
-        System.out.println("Konstruktor Test");
-    }
-
     @Override
     public String getName() {
         return "Test";
