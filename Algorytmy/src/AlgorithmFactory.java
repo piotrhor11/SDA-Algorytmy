@@ -12,8 +12,8 @@ public class AlgorithmFactory {
                 return new SpecialCamelCase();
             case "naturalnumberssum":
                 return new NaturalNumbersSum();
-//            case "inputnumberssum":
-//                return new InputNumbersSum();
+            case "inputnumberssum":
+                return new InputNumbersSum();
 //            case "cashwithdraw":
 //                return new CashWithdraw();
 //            case "leapyear":
