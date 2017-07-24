@@ -27,5 +27,17 @@ public class PoorCamelCase extends AbstractAlgorithm {
             System.out.printf(" ");
     }
 
+    public char changePolishLetters(char i){
+
+        switch(i){
+            case('Ą'):
+               return 'A';
+            case('ą'):
+                return 'a';
+            case('Ę'):
+                return 'Ę':
+        }
+    }
+
     }
 }
