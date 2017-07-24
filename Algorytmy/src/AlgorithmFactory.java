@@ -14,8 +14,8 @@ public class AlgorithmFactory {
                 return new NaturalNumbersSum();
             case "inputnumberssum":
                 return new InputNumbersSum();
-//            case "cashwithdraw":
-//                return new CashWithdraw();
+            case "cashwithdraw":
+                return new CashWithdraw();
 //            case "leapyear":
 //                return new LeapYear();
 
