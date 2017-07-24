@@ -16,8 +16,8 @@ public class AlgorithmFactory {
                 return new InputNumbersSum();
             case "cashwithdraw":
                 return new CashWithdraw();
-//            case "leapyear":
-//                return new LeapYear();
+            case "leapyear":
+                return new LeapYear();
 
             default:
                 throw new Exception("Nie ma takiego algorytmu");
