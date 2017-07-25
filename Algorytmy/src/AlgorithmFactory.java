@@ -18,6 +18,16 @@ public class AlgorithmFactory {
                 return new CashWithdraw();
             case "leapyear":
                 return new LeapYear();
+            case "factorial":
+                return new Factorial();
+            case "recursionsum":
+                return new RecursionSum();
+            case "factorialending":
+                return new FactorialEnding();
+            case "fibonaccinumbers":
+                return new FibonacciNumbers();
+            case "caesarcipher":
+                return new CaesarCipher();
 
             default:
                 throw new Exception("Nie ma takiego algorytmu");
