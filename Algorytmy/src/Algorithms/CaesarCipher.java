@@ -5,16 +5,15 @@ public class CaesarCipher extends AbstractAlgorithm {
     private final char[] alphabet = {'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'Z'};
 
     private int findMeIndex(char letter) {
-        int i;
-        for (i = 0; i < alphabet.length; i++) {
+
+        for (int i = 0; i < alphabet.length; i++) {
             if (letter == alphabet[i]) {
-                break;
+                return i;
             }
         }
-        return i;
+        return -4;
     }
-
-
+    
     @Override
     public String getName() {
         return "Caesar Cipher";
