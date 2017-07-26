@@ -28,6 +28,8 @@ public class AlgorithmFactory {
                 return new FibonacciNumbers();
             case "caesarcipher":
                 return new CaesarCipher();
+            case "bubbelsort":
+                return new BubbelSort();
 
             default:
                 throw new Exception("Nie ma takiego algorytmu");
