@@ -21,13 +21,13 @@ public class BubbelSort extends AbstractAlgorithm {
     public void runAlgorithm(String[] input) {
 
         tab = new int[input.length - 1];
-        sorted = new int[input.length - 1];
+//        sorted = new int[input.length - 1];
 
         for (int i = 0; i < input.length - 1; i++) {
             tab[i] = Integer.parseInt(input[i + 1]);
-            sorted[i] = Integer.parseInt(input[i + 1]);
+//            sorted[i] = Integer.parseInt(input[i + 1]);
         }
-        
+
         for (int i = 0; i < tab.length; i++) {
             for (int j = 0; j < tab.length; j++) {
                 if (tab[i] < tab[j]) {

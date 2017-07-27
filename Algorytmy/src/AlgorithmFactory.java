@@ -30,6 +30,8 @@ public class AlgorithmFactory {
                 return new CaesarCipher();
             case "bubbelsort":
                 return new BubbelSort();
+            case "sortdistances":
+                return new SortDistances();
 
             default:
                 throw new Exception("Nie ma takiego algorytmu");
