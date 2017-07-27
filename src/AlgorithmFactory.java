@@ -32,6 +32,8 @@ public class AlgorithmFactory {
                 return new BubbelSort();
             case "sortdistances":
                 return new SortDistances();
+            case "countingsort":
+                return new CountingSort();
 
             default:
                 throw new Exception("Nie ma takiego algorytmu");
