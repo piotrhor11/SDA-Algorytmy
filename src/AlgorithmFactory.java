@@ -34,6 +34,8 @@ public class AlgorithmFactory {
                 return new SortDistances();
             case "countingsort":
                 return new CountingSort();
+            case "battleshipboard":
+                return new BattleshipBoard();
 
             default:
                 throw new Exception("Nie ma takiego algorytmu");
