@@ -26,8 +26,8 @@ public class SortDistances extends AbstractAlgorithm {
             wynik[i][0] = tab[i][0];
         }
 
-        for (int i = 0; i < wynik.length - 1; i++) {
-            for (int j = 0; j < wynik[i].length - 1; j++) {
+        for (int i = 0; i < wynik.length; i++) {
+            for (int j = 0; j < wynik.length - 1; j++) {
                 if (wynik[j][1] > wynik[j + 1][1]) {
                     int[] tmp = wynik[j];
                     wynik[j] = wynik[j + 1];
@@ -36,8 +36,8 @@ public class SortDistances extends AbstractAlgorithm {
             }
         }
 
-        for (int[] raw : wynik) {
-            System.out.printf("Dystans punktu %d wynosi %d", raw[0], raw[1]);
+        for (int[] row : wynik) {
+            System.out.printf("Dystans punktu %d wynosi %d", row[0], row[1]);
             System.out.println();
         }
 
