@@ -36,7 +36,7 @@ public class SortDistances extends AbstractAlgorithm {
             }
         }
 
-        for (int[] raw : tab) {
+        for (int[] raw : wynik) {
             System.out.printf("Dystans punktu %d wynosi %d", raw[0], raw[1]);
             System.out.println();
         }
