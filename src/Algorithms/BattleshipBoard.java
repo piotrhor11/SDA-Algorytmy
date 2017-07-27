@@ -20,7 +20,11 @@ public class BattleshipBoard extends AbstractAlgorithm {
             int side = (int) Math.sqrt(size);
             for (int i = 0; i < side; i++) {
                 for (int j = 0; j < side; j++) {
-                    System.out.printf("%c%d ", alphabet[i % alphabet.length], j + 1);
+                    for (int k = 0; k <= i / alphabet.length; k++) {
+                        System.out.printf("%c", alphabet[i % alphabet.length]);
+                    }
+                    System.out.printf("%d ", j + 1);
+
                 }
                 System.out.printf("\n");
             }

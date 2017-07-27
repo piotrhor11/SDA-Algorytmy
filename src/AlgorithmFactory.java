@@ -1,6 +1,5 @@
 import Algorithms.*;
 
-
 public class AlgorithmFactory {
     public AbstractAlgorithm getAlgorithm(String name) throws Exception {
         switch (name) {
@@ -36,6 +35,9 @@ public class AlgorithmFactory {
                 return new CountingSort();
             case "battleshipboard":
                 return new BattleshipBoard();
+
+            case "homework1":
+                return new Homework1();
 
             default:
                 throw new Exception("Nie ma takiego algorytmu");
