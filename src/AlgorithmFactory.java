@@ -35,7 +35,19 @@ public class AlgorithmFactory {
                 return new CountingSort();
             case "battleshipboard":
                 return new BattleshipBoard();
+            //Zadania z listy z piątku 28.07.2017
+            case "gtc":
+                return new GreatestCommonDivisor();
+            case "draughts":
+                return new Draughts();
+            case "mode":
+                return new Mode();      //Dominanta
+            case "testanswers":
+                return new TestAnswers();
+            case "daycheck":
+                return new DayCheck();
 
+            //Zadania domowe
             case "homework1":
                 return new Homework1();
 
