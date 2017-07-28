@@ -2,7 +2,9 @@ package Algorithms;
 
 public class BattleshipBoard extends AbstractAlgorithm {
 
-    private final char[] alphabet = {'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'Z'};
+    //    private final char[] alphabet = {'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'Z'};
+    private final char[] alphabet = {'A', 'B', 'C'};
+
 
     @Override
     public String getName() {
@@ -20,7 +22,7 @@ public class BattleshipBoard extends AbstractAlgorithm {
             int side = (int) Math.sqrt(size);
             for (int i = 0; i < side; i++) {
                 for (int j = 0; j < side; j++) {
-                    for (int k = 0; k <= i / alphabet.length; k++) {
+                    for (int k = 0; k < (i / Math.pow(alphabet.length, 2d) + 1); k++) {
                         System.out.printf("%c", alphabet[i % alphabet.length]);
                     }
                     System.out.printf("%d ", j + 1);

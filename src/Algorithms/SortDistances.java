@@ -13,7 +13,7 @@ public class SortDistances extends AbstractAlgorithm {
         int tab[][] = new int[n][3];
         int wynik[][] = new int[n][2];
 
-        for (int i = 0; i < (input.length - 2) / 3; i++) {
+        for (int i = 0; i < (input.length - 2) / 3; i++) {      //Wczytujemy kolejne punkty, czyli po 3 liczby z wejścia (nazwa i para współrzędnych)
             tab[i][0] = Integer.parseInt(input[3 * i + 2]);
             tab[i][1] = Integer.parseInt(input[3 * i + 3]);
             tab[i][2] = Integer.parseInt(input[3 * i + 4]);
@@ -21,7 +21,7 @@ public class SortDistances extends AbstractAlgorithm {
 
         int distance = 0;
         for (int i = 0; i < n; i++) {
-            distance = (int) (Math.sqrt(Math.pow((double) tab[i][1], 2d) + Math.pow((double) tab[i][2], 2d)));
+            distance = (int) (Math.sqrt(Math.pow((double) tab[i][1], 2d) + Math.pow((double) tab[i][2], 2d)));  //Pierwiastek z sumy kwadratów
             wynik[i][1] = distance;
             wynik[i][0] = tab[i][0];
         }
@@ -36,7 +36,7 @@ public class SortDistances extends AbstractAlgorithm {
             }
         }
 
-        for (int[] row : wynik) {
+        for (int[] row : wynik) {                                                   // Wyświetlenie posortowanych wyników w formacie: punkt - dystans
             System.out.printf("Dystans punktu %d wynosi %d", row[0], row[1]);
             System.out.println();
         }
