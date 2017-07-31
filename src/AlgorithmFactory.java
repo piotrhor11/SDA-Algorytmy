@@ -35,6 +35,13 @@ public class AlgorithmFactory {
                 return new CountingSort();
             case "battleshipboard":
                 return new BattleshipBoard();
+            case "tables":
+                return new Tables();            // "Struktury danych" - Slajd 10
+            case "tablesminmax":
+                return new TablesMinMax();      // "Struktury danych" - Slajd 13
+            case "tablesleader":
+                return new TablesLeader();      // "Struktury danych" - Slajd 14
+
             //Zadania z listy z piątku 28.07.2017
             case "gtc":
                 return new GreatestCommonDivisor();
@@ -46,6 +53,10 @@ public class AlgorithmFactory {
                 return new TestAnswers();
             case "daycheck":
                 return new DayCheck();
+            //Koniec listy z piątku 28.07.2017
+
+            case "easter":
+                return new Easter();    // Zbiór zadań - zad1
 
             //Zadania domowe
             case "homework1":
