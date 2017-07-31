@@ -15,9 +15,9 @@ public class AlgorithmFactory {
                 return new InputNumbersSum();
             case "cashwithdraw":
                 return new CashWithdraw();
-            case "leapyear":
+            case "leapyear":                //Rok 
                 return new LeapYear();
-            case "factorial":
+            case "factorial":               // Silnia
                 return new Factorial();
             case "recursionsum":
                 return new RecursionSum();
