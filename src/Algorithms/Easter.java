@@ -35,7 +35,7 @@ public class Easter extends AbstractAlgorithm {
             month = 3;
         }
 
-        DayOfWeek dayS = DayOfWeek.of(day);
+        DayOfWeek dayS = DayOfWeek.of(day);             //ToDo - date format not applied
         Month monthS = Month.of(month);
 
 //        System.out.println("W roku %d wielkanoc wypadnie %d %d", year, day, month);

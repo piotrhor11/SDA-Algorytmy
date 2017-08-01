@@ -1,6 +1,6 @@
 package Algorithms;
 
-public class TablesLeader extends AbstractAlgorithm {
+public class TablesLeader extends AbstractAlgorithm {           //FixMe - Not working properly
 
     @Override
     public String getName() {
