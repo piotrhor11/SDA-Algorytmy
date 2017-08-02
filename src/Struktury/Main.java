@@ -10,6 +10,7 @@ public class Main {
         MyListElement elementA = new MyListElement("nóż", 1);
         MyListElement elementB = new MyListElement("łyżka", 2);
         MyListElement elementC = new MyListElement("widelec", 3);
+        MyListElement elementD = new MyListElement("talerz", 4);
 
         lista.addAtBeginning(elementA);
         lista.addAtBeginning(elementC);
@@ -17,11 +18,18 @@ public class Main {
 //        lista.goThroughForward(lista);
 
         lista.printAllElements(lista);
+        System.out.println();
 
-        lista.addElementBeforeElement(elementC, elementB, lista);
+        lista.addElementBeforeElement(elementB, elementA, lista);
 
         lista.printAllElements(lista);
+        System.out.println();
 
+        lista.addElementAfterElement(elementD, elementC, lista);
+
+        lista.printAllElements(lista);
+        System.out.println();
+        
         ArrayList<String> kolory = new ArrayList<>();
         kolory.add("Niebieski");
         kolory.add("Czarny");

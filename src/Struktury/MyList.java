@@ -37,7 +37,7 @@ public class MyList {
         }
     }
 
-    public void remove(MyListElement element) {
+    public void remove(MyListElement element) {                 //ToDo remove()
 
     }
 
