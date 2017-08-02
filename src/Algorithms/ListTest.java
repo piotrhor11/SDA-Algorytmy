@@ -1,9 +1,19 @@
-package Struktury;
+package Algorithms;
+
+import Struktury.MyList;
+import Struktury.MyListElement;
 
 import java.util.ArrayList;
 
-public class Main {
-    public static void main(String[] args) {
+public class ListTest extends AbstractAlgorithm {
+
+    @Override
+    public String getName() {
+        return "List Test";
+    }
+
+    @Override
+    public void runAlgorithm(String[] input) {
 
         MyList lista = new MyList();
 
@@ -29,7 +39,7 @@ public class Main {
 
         lista.printAllElements(lista);
         System.out.println();
-        
+
         ArrayList<String> kolory = new ArrayList<>();
         kolory.add("Niebieski");
         kolory.add("Czarny");
@@ -42,5 +52,6 @@ public class Main {
         for (String kolor : kolory) {
             System.out.println(kolor);
         }
+
     }
 }

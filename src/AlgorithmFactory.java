@@ -41,6 +41,10 @@ public class AlgorithmFactory {
                 return new TablesMinMax();      // "Struktury danych" - Slajd 13
             case "tablesleader":
                 return new TablesLeader();      // "Struktury danych" - Slajd 14
+            case "listtest":
+                return new ListTest();
+            case "simpletree":
+                return new SimpleTree();        //"Struktury danych" - Slajd 87
 
             //Zadania z listy z piątku 28.07.2017
             case "gtc":
