@@ -36,15 +36,19 @@ public class AlgorithmFactory {
             case "battleshipboard":
                 return new BattleshipBoard();
             case "tables":
-                return new Tables();            // "Struktury danych" - Slajd 10
+                return new Tables();                    // "Struktury danych" - Slajd 10
             case "tablesminmax":
-                return new TablesMinMax();      // "Struktury danych" - Slajd 13
+                return new TablesMinMax();              // "Struktury danych" - Slajd 13
             case "tablesleader":
-                return new TablesLeader();      // "Struktury danych" - Slajd 14
+                return new TablesLeader();              // "Struktury danych" - Slajd 14
             case "listtest":
                 return new ListTest();
+            case "decimaltobinaryandhex":
+                return new DecimalToBinaryAndHex();     //"Struktury danych" - Slajd 63
             case "simpletree":
-                return new SimpleTree();        //"Struktury danych" - Slajd 87
+                return new SimpleTree();                //"Struktury danych" - Slajd 87
+            case "heaptest":
+                return new HeapTest();                  //"Struktury danych" - Slajd 99
 
             //Zadania z listy z piątku 28.07.2017
             case "gtc":
@@ -52,7 +56,7 @@ public class AlgorithmFactory {
             case "draughts":
                 return new Draughts();
             case "mode":
-                return new Mode();      //Dominanta
+                return new Mode();                      //Dominanta
             case "testanswers":
                 return new TestAnswers();
             case "daycheck":
@@ -60,7 +64,9 @@ public class AlgorithmFactory {
             //Koniec listy z piątku 28.07.2017
 
             case "easter":
-                return new Easter();    // Zbiór zadań - zad1
+                return new Easter();                    // Zbiór zadań - zad 1
+            case "reversepolishnotation":
+                return new ReversePolishNotation();     //Zbiór zadań - zad 15
 
             //Zadania domowe
             case "homework1":
