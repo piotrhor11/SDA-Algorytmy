@@ -42,7 +42,7 @@ public class AlgorithmFactory {
             case "tablesleader":
                 return new TablesLeader();              // "Struktury danych" - Slajd 14
             case "listtest":
-                return new ListTest();
+                return new MyListTest();
             case "decimaltobinaryandhex":
                 return new DecimalToBinaryAndHex();     //"Struktury danych" - Slajd 63
             case "simpletree":
@@ -61,8 +61,20 @@ public class AlgorithmFactory {
                 return new TestAnswers();
             case "daycheck":
                 return new DayCheck();
-            //Koniec listy z piątku 28.07.2017
 
+            //Zadania z listy z piątku 04.08.2017
+            case "duplication":
+                return new Duplication();
+            case "deleteinarraylist":
+                return new DeleteInArrayList();
+            case "myonewaylisttest":
+                return new MyOneWayListTest();
+            case "palindromcheck":
+                return new PalindromCheck();
+            case "reversepolishnotationtranslator":
+                return new ReversePolishNotationTranslator();
+
+            //Zadania ze zbioru zadań
             case "easter":
                 return new Easter();                    // Zbiór zadań - zad 1
             case "reversepolishnotation":

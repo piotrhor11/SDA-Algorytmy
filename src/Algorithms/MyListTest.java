@@ -5,7 +5,7 @@ import Struktury.MyListElement;
 
 import java.util.ArrayList;
 
-public class ListTest extends AbstractAlgorithm {
+public class MyListTest extends AbstractAlgorithm {
 
     @Override
     public String getName() {
