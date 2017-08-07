@@ -17,28 +17,37 @@ public class MyListTest extends AbstractAlgorithm {
 
         MyList lista = new MyList();
 
-        MyListElement elementA = new MyListElement("nóż", 1);
-        MyListElement elementB = new MyListElement("łyżka", 2);
-        MyListElement elementC = new MyListElement("widelec", 3);
-        MyListElement elementD = new MyListElement("talerz", 4);
+        MyListElement elementA = new MyListElement(1);
+        MyListElement elementB = new MyListElement(2);
+        MyListElement elementC = new MyListElement(3);
+        MyListElement elementD = new MyListElement(4);
+        MyListElement elementE = new MyListElement(5);
 
-        lista.addAtBeginning(elementA);
         lista.addAtBeginning(elementC);
+        lista.addAtBeginning(elementA);
+        lista.addAtEnd(elementE);
 
-//        lista.goThroughForward(lista);
-
-        lista.printAllElements(lista);
+        lista.printAll();
         System.out.println();
 
-        lista.addElementBeforeElement(elementB, elementA, lista);
+        lista.addElementBeforeElement(elementB, elementC);
 
-        lista.printAllElements(lista);
+        lista.printAllBackward();
         System.out.println();
 
-        lista.addElementAfterElement(elementD, elementC, lista);
+        lista.addElementAfterElement(elementD, elementC);
 
-        lista.printAllElements(lista);
+        lista.printAll();
         System.out.println();
+
+        lista.removeBeginning();
+        lista.removeEnd();
+        lista.remove(elementC);
+        
+        lista.printAll();
+        System.out.println();
+
+        //Zabawy z ArrayListą
 
         ArrayList<String> kolory = new ArrayList<>();
         kolory.add("Niebieski");

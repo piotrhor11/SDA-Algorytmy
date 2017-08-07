@@ -18,6 +18,15 @@ public class HeapTest extends AbstractAlgorithm {
         }
 
         kopiec.printHeap();
+        System.out.println();
+
+        int heapSize = kopiec.get_counter();
+        for (int i = 0; i < heapSize; i++) {
+            System.out.printf("\nUsunięto %d", kopiec.removeElement());
+            kopiec.printHeap();
+            System.out.println();
+
+        }
 
     }
 }

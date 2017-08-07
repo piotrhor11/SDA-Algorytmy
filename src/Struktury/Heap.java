@@ -5,10 +5,12 @@ public class Heap {
     private int[] _data;
     private int _counter = 0;
 
+    public int get_counter() {
+        return _counter;
+    }
+
     public Heap(int n) {
-
         this._data = new int[n];
-
     }
 
     public void insertElement(int element) {
@@ -25,8 +27,40 @@ public class Heap {
         _counter++;
     }
 
-    public void removeElement() {            //Todo Remove method
+    public int removeElement() {            //Todo Remove method
 
+        int top = -1;
+
+        if (_counter > 0) {
+
+            top = _data[0];
+            int i = 0;
+            int j = 1;
+            int temp;
+            _data[i] = _data[_counter - 1];
+
+            while (j < _counter) {
+                if (j + 1 < _counter && _data[j + 1] > _data[j]) {               //Wyszukanie większego z synów
+                    j = j + 1;
+                }
+                if (_data[i] >= _data[j]) {
+                    break;
+                } else {
+                    temp = _data[i];
+                    _data[i] = _data[j];
+                    _data[j] = temp;
+                    i = j;
+                    j = 2 * j + 1;
+                }
+            }
+            _data[i] = _data[_counter - 1];
+            _data[_counter - 1] = 0;
+            _counter--;
+
+        } else {
+            System.out.printf("\nKopiec jest już pusty!\n");
+        }
+        return top;
     }
 
     public void printHeap() {                       //ToDo wydruk w formie choinki

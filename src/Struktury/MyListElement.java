@@ -5,17 +5,14 @@ public class MyListElement {
     MyListElement next = null;
     MyListElement previous = null;
 
-    String dataS = "";
-    int dataN = 0;
+    int data = 0;
 
-    public MyListElement(String dataS, int dataN) {
-        this.dataS = dataS;
-        this.dataN = dataN;
+    public MyListElement(int data) {
+        this.data = data;
     }
 
-    public void changeData(String data) {
-        this.dataS = dataS;
-        this.dataN = dataN;
+    public void changeData(int data) {
+        this.data = data;
     }
 
     public void updateNext(MyListElement update) {
@@ -24,5 +21,20 @@ public class MyListElement {
 
     public void updatePrevious(MyListElement update) {
         this.previous = update;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        MyListElement that = (MyListElement) o;
+
+        return data == that.data;
+    }
+
+    @Override
+    public int hashCode() {
+        return data;
     }
 }

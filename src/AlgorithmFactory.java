@@ -41,7 +41,7 @@ public class AlgorithmFactory {
                 return new TablesMinMax();              // "Struktury danych" - Slajd 13
             case "tablesleader":
                 return new TablesLeader();              // "Struktury danych" - Slajd 14
-            case "listtest":
+            case "mylisttest":
                 return new MyListTest();
             case "decimaltobinaryandhex":
                 return new DecimalToBinaryAndHex();     //"Struktury danych" - Slajd 63

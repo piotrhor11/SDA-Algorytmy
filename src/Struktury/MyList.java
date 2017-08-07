@@ -6,10 +6,12 @@ public class MyList {
     MyListElement _tail;
     int count = 0;
 
+    //ADDING ELEMENTS
+
     public void addAtEnd(MyListElement element) {
 
         if (_head == null) {
-            element.previous = null;
+            element.updatePrevious(null);
             _head = element;
             _tail = element;            //Czy potrzebne???
             this.count = 1;
@@ -37,64 +39,12 @@ public class MyList {
         }
     }
 
-    public void remove(MyListElement element) {                 //ToDo remove()
+    public void addElementBeforeElement(MyListElement newElement, MyListElement existingElement) {
 
-    }
-
-    public void goThroughForward(MyList list) {
-        MyListElement p = list._head;
-        while (p != null) {
-            System.out.printf("%s", p.dataS);
-            System.out.println();
-            if (p.next == null) {
-                break;
-            } else {
-                p = p.next;
-            }
-        }
-    }
-
-    public void goThroughBackward(MyList list) {
-        MyListElement p = list._tail;
-        while (p != null) {
-            System.out.printf("%s", p.dataS);
-            System.out.println();
-            if (p.previous == null) {
-                break;
-            } else {
-                p = p.previous;
-            }
-        }
-    }
-
-    public void printAllElements(MyList lista) {
-        MyListElement p = lista._head;
-        while (p != null) {
-            System.out.println(p.dataN);
-            p = p.next;
-        }
-    }
-
-    public MyListElement findElement(MyList lista, MyListElement element) {
-        MyListElement p = lista._head;
-        while (p != null) {
-            if (element.dataN == p.dataN) {
-                return p;
-            } else if (p.next != null) {
-                p = p.next;
-            } else {
-                break;
-            }
-        }
-        return null;
-    }
-
-    public void addElementBeforeElement(MyListElement newElement, MyListElement existingElement, MyList lista) {
-
-        if (findElement(lista, existingElement) != null) {
+        if (findElement(existingElement) != null) {
 
             if (existingElement.previous == null) {
-                lista.addAtBeginning(newElement);
+                this.addAtBeginning(newElement);
             } else {
                 newElement.previous = existingElement.previous;
                 existingElement.previous.next = newElement;
@@ -107,12 +57,12 @@ public class MyList {
         }
     }
 
-    public void addElementAfterElement(MyListElement newElement, MyListElement existingElement, MyList lista) {
+    public void addElementAfterElement(MyListElement newElement, MyListElement existingElement) {
 
-        if (findElement(lista, existingElement) != null) {
+        if (findElement(existingElement) != null) {
 
             if (existingElement.next == null) {
-                lista.addAtEnd(newElement);
+                this.addAtEnd(newElement);
             } else {
                 existingElement.next.previous = newElement;
                 newElement.next = existingElement.next;
@@ -124,7 +74,96 @@ public class MyList {
         } else {
             System.out.println("ERROR!!! Elementu nie ma na liście");
         }
+    }
+
+    //REMOVING ELEMENTS
+
+    public void removeBeginning() {
+        if (_head != null) {
+            _head.next.updatePrevious(null);
+            _head = _head.next;
+            this.count--;
+        } else {
+            System.out.printf("\nEmpty list, nothing to do! :(\n");
+        }
+    }
+
+    public void removeEnd() {
+        if (_tail != null) {
+            _tail.previous.updateNext(null);
+            _tail = _tail.previous;
+            this.count--;
+        } else {
+            System.out.printf("\nEmpty list, nothing to do!\n");
+        }
+    }
+
+    public void remove(MyListElement element) {
+
+        if (findElement(element) != null) {
+            if (element == _head) {
+                removeBeginning();
+            } else if (element == _tail) {
+                removeEnd();
+            } else {
+                element.previous.updateNext(element.next);
+                element.next.updatePrevious(element.previous);
+                count--;
+            }
+        } else {
+            System.out.printf("\nElement not in the list!\n");
+        }
 
     }
 
+    //PRINTING
+
+    public void printAll() {
+        MyListElement p = this._head;
+        while (p != null) {
+            System.out.printf("%d\n", p.data);
+            if (p.next == null) {
+                break;
+            } else {
+                p = p.next;
+            }
+        }
+    }
+
+//    public void printAllElements() {
+//        MyListElement p = this._head;
+//        while (p != null) {
+//            System.out.println(p.data);
+//            p = p.next;                           //Przy ostatnim elemencie wyrzuci wyjątek
+//        }
+//    }
+
+    public void printAllBackward() {
+        MyListElement p = this._tail;
+        while (p != null) {
+            System.out.printf("%d", p.data);
+            System.out.println();
+            if (p.previous == null) {
+                break;
+            } else {
+                p = p.previous;
+            }
+        }
+    }
+
+    //SUPPORT METHODS
+
+    private MyListElement findElement(MyListElement element) {
+        MyListElement p = this._head;
+        while (p != null) {
+            if (p.equals(element)) {
+                return p;
+            } else if (p.next != null) {
+                p = p.next;
+            } else {
+                break;
+            }
+        }
+        return null;
+    }
 }
