@@ -3,7 +3,8 @@ package Algorithms;
 import java.util.ArrayList;
 import java.util.Stack;
 
-public class ReversePolishNotationTranslator extends AbstractAlgorithm {
+public class ReversePolishNotationTranslator extends AbstractAlgorithm {            //ToDo Do zrobienia
+
     @Override
     public String getName() {
         return "Reverse Polish Notation Translator";
@@ -39,13 +40,13 @@ public class ReversePolishNotationTranslator extends AbstractAlgorithm {
                 case "/":
                     break;
                 case "^":
-                    while (!stosik.empty()) {
-                        if (GetOperatorPriority(input[i]) == 3 || GetOperatorPriority(input[i]) >= GetOperatorPriority(stosik.peek())) {
-                            break;
-                        } else {
-                            System.out.printf("%s", stosik.pop());
-                        }
-                    }
+//                    while (!stosik.empty()) {
+//                        if (GetOperatorPriority(input[i]) == 3 || GetOperatorPriority(input[i]) >= GetOperatorPriority(stosik.peek())) {
+//                            break;
+//                        } else {
+//                            System.out.printf("%s", stosik.pop());
+//                        }
+//                    }
                     break;
                 case "=":
                     while (!stosik.empty()) {

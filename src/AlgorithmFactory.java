@@ -44,7 +44,7 @@ public class AlgorithmFactory {
             case "mylisttest":
                 return new MyListTest();
             case "decimaltobinaryandhex":
-                return new DecimalToBinaryAndHex();     //"Struktury danych" - Slajd 63
+                return new NumeralSystemConverter();     //"Struktury danych" - Slajd 63
             case "simpletree":
                 return new SimpleTree();                //"Struktury danych" - Slajd 87
             case "heaptest":
@@ -77,8 +77,10 @@ public class AlgorithmFactory {
             //Zadania ze zbioru zadań
             case "easter":
                 return new Easter();                    // Zbiór zadań - zad 1
+            case "leastcommonmultiple":
+                return new LeastCommonMultiple();       // Zbiór zadań - zad 11
             case "reversepolishnotation":
-                return new ReversePolishNotation();     //Zbiór zadań - zad 15
+                return new ReversePolishNotation();     // Zbiór zadań - zad 15
 
             //Zadania domowe
             case "homework1":
