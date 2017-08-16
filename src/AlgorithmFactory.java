@@ -43,8 +43,8 @@ public class AlgorithmFactory {
                 return new TablesLeader();              // "Struktury danych" - Slajd 14
             case "mylisttest":
                 return new MyListTest();
-            case "decimaltobinaryandhex":
-                return new NumeralSystemConverter();     //"Struktury danych" - Slajd 63
+//            case "decimaltobinaryandhex":
+//                return new NumeralSystemConverter();     //"Struktury danych" - Slajd 63
             case "simpletree":
                 return new SimpleTree();                //"Struktury danych" - Slajd 87
             case "heaptest":
