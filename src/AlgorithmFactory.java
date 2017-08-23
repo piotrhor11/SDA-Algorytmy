@@ -69,8 +69,8 @@ public class AlgorithmFactory {
                 return new DeleteInArrayList();
             case "myonewaylisttest":
                 return new MyOneWayListTest();
-            case "palindromcheck":
-                return new PalindromCheck();
+            case "palindromecheck":
+                return new PalindromeCheck();
             case "reversepolishnotationtranslator":
                 return new ReversePolishNotationTranslator();
 
@@ -83,8 +83,8 @@ public class AlgorithmFactory {
                 return new ReversePolishNotation();     // Zbiór zadań - zad 15
 
             //Zadania domowe
-            case "homework1":
-                return new Homework1();
+            case "palindromesum":
+                return new PalindromeSum();             // Zbiór zadań - zad domowe 1
 
             default:
                 throw new Exception("Nie ma takiego algorytmu");

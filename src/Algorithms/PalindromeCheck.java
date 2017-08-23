@@ -3,7 +3,7 @@ package Algorithms;
 import java.util.ArrayList;
 import java.util.Stack;
 
-public class PalindromCheck extends AbstractAlgorithm {
+public class PalindromeCheck extends AbstractAlgorithm {
     @Override
     public String getName() {
         return "Palindrom Check";

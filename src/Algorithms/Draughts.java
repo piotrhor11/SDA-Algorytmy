@@ -26,7 +26,7 @@ public class Draughts extends AbstractAlgorithm {
         int k = colors.indexOf(first);
 
         for (int i = 0; i < m; i++) {
-            if (i > 0 && n % 2 == 0) {                  //Do poprawy - paskudne rozwiązanie problemu z parzystą liczbą kolumn!!!
+            if (i > 0 && n % 2 == 0) {                  //ToDo - paskudne rozwiązanie problemu z parzystą liczbą kolumn!!!
                 k++;
             }
             for (int j = 0; j < n; j++) {
