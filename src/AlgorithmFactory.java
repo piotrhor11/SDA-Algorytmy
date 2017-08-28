@@ -85,6 +85,8 @@ public class AlgorithmFactory {
             //Zadania domowe
             case "palindromesum":
                 return new PalindromeSum();             // Zbiór zadań - zad domowe 1
+            case "marker":
+                return new Marker();                    // Zbiór zadań - zad domowe 2
 
             default:
                 throw new Exception("Nie ma takiego algorytmu");
