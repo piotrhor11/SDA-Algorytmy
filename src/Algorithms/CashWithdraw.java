@@ -13,8 +13,8 @@ public class CashWithdraw extends AbstractAlgorithm {
         final int[] zlote = {200, 100, 50, 20, 10, 5, 2, 1};
         final int[] grosze = {50, 20, 10, 5, 2, 1};
 
-        int[] wydaneZl = new int[8];
-        int[] wydaneGr = new int[6];
+        int[] wydaneZl = new int[zlote.length];
+        int[] wydaneGr = new int[grosze.length];
 
         int kwotaZl = Integer.parseInt(input[1]);
         int kwotaGr = Integer.parseInt(input[2]);

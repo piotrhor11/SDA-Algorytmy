@@ -5,18 +5,16 @@ public class AlgorithmFactory {
         switch (name) {
             case "test":
                 return new Test();
-            case "poorcamelcase":
-                return new PoorCamelCase();
-            case "specialcamelcase":
-                return new SpecialCamelCase();
             case "naturalnumberssum":
-                return new NaturalNumbersSum();
+                return new NaturalNumbersSum();     // "Algorytmy" - Slajd 13
             case "inputnumberssum":
-                return new InputNumbersSum();
+                return new InputNumbersSum();       // "Algorytmy" = Slajd 20
             case "cashwithdraw":
-                return new CashWithdraw();
-            case "leapyear":                //Rok 
-                return new LeapYear();
+                return new CashWithdraw();          // "Algorytmy" - Slajd 21
+            case "leapyear":
+                return new LeapYear();              // "Algorytny" = Slajd 22
+            case "caesarcipher":
+                return new CaesarCipher();          // "Algorytmy" - slajd 23
             case "factorial":               // Silnia
                 return new Factorial();
             case "recursionsum":
@@ -25,8 +23,6 @@ public class AlgorithmFactory {
                 return new FactorialEnding();
             case "fibonaccinumbers":
                 return new FibonacciNumbers();
-            case "caesarcipher":
-                return new CaesarCipher();
             case "bubbelsort":
                 return new BubbelSort();
             case "sortdistances":
@@ -76,17 +72,21 @@ public class AlgorithmFactory {
 
             //Zadania ze zbioru zadań
             case "easter":
-                return new Easter();                    // Zbiór zadań - zad 1
+                return new Easter();                    // zad 1
+            case "poorcamelcase":
+                return new PoorCamelCase();             // zad 2
+            case "specialcamelcase":
+                return new SpecialCamelCase();          // zad 3
             case "leastcommonmultiple":
-                return new LeastCommonMultiple();       // Zbiór zadań - zad 11
+                return new LeastCommonMultiple();       // zad 11
             case "reversepolishnotation":
-                return new ReversePolishNotation();     // Zbiór zadań - zad 15
+                return new ReversePolishNotation();     // zad 15
 
-            //Zadania domowe
+            //Zadania domowe ze zbioru zadań
             case "palindromesum":
-                return new PalindromeSum();             // Zbiór zadań - zad domowe 1
+                return new PalindromeSum();             // zad domowe 1
             case "marker":
-                return new Marker();                    // Zbiór zadań - zad domowe 2
+                return new Marker();                    // zad domowe 2
 
             default:
                 throw new Exception("Nie ma takiego algorytmu");
