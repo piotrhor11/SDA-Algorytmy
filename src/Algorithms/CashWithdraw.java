@@ -19,6 +19,8 @@ public class CashWithdraw extends AbstractAlgorithm {
         int kwotaZl = Integer.parseInt(input[1]);
         int kwotaGr = Integer.parseInt(input[2]);
 
+        System.out.println("Wydajemy " + kwotaZl + "zł i " + kwotaGr + "gr:");
+
         for (int i = 0; i < zlote.length; i++) {                //Pętla na złotówki
             for (int j = 0; kwotaZl >= zlote[i]; j++) {
                 kwotaZl = kwotaZl - zlote[i];

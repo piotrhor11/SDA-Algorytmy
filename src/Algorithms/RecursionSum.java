@@ -18,6 +18,6 @@ public class RecursionSum extends AbstractAlgorithm {
     public void runAlgorithm(String[] input) {
 
         int n = Integer.parseInt(input[1]);
-        System.out.println(suma(n));
+        System.out.println("Suma " + n + " kolejnych liczb wynosi " + suma(n));
     }
 }

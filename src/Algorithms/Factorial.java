@@ -18,6 +18,6 @@ public class Factorial extends AbstractAlgorithm {
     public void runAlgorithm(String[] input) {
 
         int n = Integer.parseInt(input[1]);
-        System.out.println(Silnia(n));
+        System.out.println("Wynik działania " + n + "! wynosi: " + Silnia(n));
     }
 }

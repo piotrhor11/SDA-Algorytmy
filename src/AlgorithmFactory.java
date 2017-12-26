@@ -15,18 +15,18 @@ public class AlgorithmFactory {
                 return new LeapYear();              // "Algorytny" = Slajd 22
             case "caesarcipher":
                 return new CaesarCipher();          // "Algorytmy" - slajd 23
-            case "factorial":               // Silnia
-                return new Factorial();
+            case "factorial":
+                return new Factorial();             // "Algorytmy" - slajd 26
+            case "factorialending":
+                return new FactorialEnding();       // "Algorytmy" - slajd 27
+            case "fibonaccinumbers":
+                return new FibonacciNumbers();      // "Algorytmy" - slajd 28
             case "recursionsum":
                 return new RecursionSum();
-            case "factorialending":
-                return new FactorialEnding();
-            case "fibonaccinumbers":
-                return new FibonacciNumbers();
             case "bubbelsort":
-                return new BubbelSort();
+                return new BubbelSort();            // "Algorytmy" - slajd 35
             case "sortdistances":
-                return new SortDistances();
+                return new SortDistances();         // "Algorytmy" - slajd 36
             case "countingsort":
                 return new CountingSort();
             case "battleshipboard":
