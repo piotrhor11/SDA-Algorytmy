@@ -28,7 +28,7 @@ public class AlgorithmFactory {
             case "sortdistances":
                 return new SortDistances();         // "Algorytmy" - slajd 36
             case "countingsort":
-                return new CountingSort();
+                return new CountingSort();          // "Algorytmy" - slajd 41
             case "battleshipboard":
                 return new BattleshipBoard();
             case "tables":

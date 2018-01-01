@@ -11,7 +11,7 @@ public class SortDistances extends AbstractAlgorithm {
 
         int n = Integer.parseInt(input[1]);
         int tab[][] = new int[n][3];
-        double wynik[][] = new double[n][2];        // Nienajlepsze rozwiązanie, gdzie int z numerem punktu rzutujemy na doubla "dla wyniku". Alternatywnie możnaby zrobić 2 osobne tablice (int[] z numerem punktu i double[] z wynikami)
+        double wynik[][] = new double[n][2];        // Nienajlepsze rozwiązanie, gdzie int z numerem punktu rzutujemy na doubla, bo wynik mamy w double'u. Alternatywnie możnaby zrobić np. 2 osobne tablice (int[] z numerem punktu i double[] z wynikami)
 
         for (int i = 0; i < (input.length - 2) / 3; i++) {      //Wczytujemy kolejne punkty, czyli po 3 liczby z wejścia (nazwa i para współrzędnych)
             tab[i][0] = Integer.parseInt(input[3 * i + 2]);
@@ -22,9 +22,9 @@ public class SortDistances extends AbstractAlgorithm {
 
         double distance;       // dla typu int prostego autoinicjalizacja da 0
         for (int i = 0; i < n; i++) {
+            wynik[i][0] = tab[i][0];
             distance = Math.sqrt(Math.pow((double) tab[i][1], 2d) + Math.pow((double) tab[i][2], 2d));  //Pierwiastek z sumy kwadratów
             wynik[i][1] = distance;
-            wynik[i][0] = tab[i][0];
         }
 
         for (int i = 0; i < wynik.length; i++) {
