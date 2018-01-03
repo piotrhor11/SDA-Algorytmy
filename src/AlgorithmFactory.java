@@ -31,6 +31,8 @@ public class AlgorithmFactory {
                 return new CountingSort();          // "Algorytmy" - slajd 41
             case "battleshipboard":
                 return new BattleshipBoard();
+            case "battleshipboard2":
+                return new BattleshipBoard2();
             case "tables":
                 return new Tables();                    // "Struktury danych" - Slajd 10
             case "tablesminmax":
