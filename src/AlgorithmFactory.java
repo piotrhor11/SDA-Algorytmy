@@ -33,6 +33,8 @@ public class AlgorithmFactory {
                 return new BattleshipBoard();
             case "battleshipboard2":
                 return new BattleshipBoard2();
+            case "insertionsort":
+                return new InsertionSort();         // "Algorytmy" - slajd 51
             case "tables":
                 return new Tables();                    // "Struktury danych" - Slajd 10
             case "tablesminmax":
