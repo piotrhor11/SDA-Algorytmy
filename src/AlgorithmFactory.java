@@ -5,6 +5,8 @@ public class AlgorithmFactory {
         switch (name) {
             case "test":
                 return new Test();
+
+            //Część 1 - ALGORYTMY
             case "naturalnumberssum":
                 return new NaturalNumbersSum();     // "Algorytmy" - Slajd 13
             case "inputnumberssum":
@@ -35,6 +37,23 @@ public class AlgorithmFactory {
                 return new BattleshipBoard2();
             case "insertionsort":
                 return new InsertionSort();         // "Algorytmy" - slajd 51
+            case "mergesort":
+                return new MergeSort();             // EKSTRA: Merge Sort
+            case "quicksort":
+                return new QuickSort();
+            //Zadania z listy z piątku 28.07.2017
+            case "gtc":
+                return new GreatestCommonDivisor();
+            case "draughts":
+                return new Draughts();
+            case "mode":
+                return new Mode();                  // Dominanta
+            case "testanswers":
+                return new TestAnswers();
+            case "daycheck":
+                return new DayCheck();
+
+            //Część 2 - STRUKTURY DANYCH
             case "tables":
                 return new Tables();                    // "Struktury danych" - Slajd 10
             case "tablesminmax":
@@ -49,19 +68,6 @@ public class AlgorithmFactory {
                 return new SimpleTree();                //"Struktury danych" - Slajd 87
             case "heaptest":
                 return new HeapTest();                  //"Struktury danych" - Slajd 99
-
-            //Zadania z listy z piątku 28.07.2017
-            case "gtc":
-                return new GreatestCommonDivisor();
-            case "draughts":
-                return new Draughts();
-            case "mode":
-                return new Mode();                      //Dominanta
-            case "testanswers":
-                return new TestAnswers();
-            case "daycheck":
-                return new DayCheck();
-
             //Zadania z listy z piątku 04.08.2017
             case "duplication":
                 return new Duplication();
