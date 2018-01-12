@@ -28,7 +28,7 @@ public class MergeSort extends AbstractAlgorithm {
         }
     }
 
-    public void sortTab(int[] tab, int first, int last) {          //Argumenty to indeksy wycinające fragment tab do posortowania
+    private void sortTab(int[] tab, int first, int last) {          //Argumenty to indeksy wycinające fragment tab do posortowania
 
         if (last - first >= 1) {
             int half = (first + last) / 2;                           //Szukamy indeksu w połowie tablicy, a następnie rekursją wywołujemy sortowanie dla obu połówek osobno
@@ -42,7 +42,7 @@ public class MergeSort extends AbstractAlgorithm {
           Należy w jakiś sposób zająć się sytuacją, w której początek lewej części tablicy de facto ląduje na jej końcu ale wymaga to ciut więcej wysiłku.
           Z tego powodu implementuję wersję z akumulatorem o długości połowy tablicy wejściowej (kopią lewej częsci).*/
 
-            //ToDo Zaimplementować rozwiązanie bez akumulatora zmieniąc tablicę na linkedlistę
+            //ToDo OPTYMALIZACJA: Zaimplementować rozwiązanie bez akumulatora zmieniąc tablicę na linkedlistę
 
             int[] tabLeftCopy = Arrays.copyOfRange(tab, first, half + 1);          //Kopia lewej części tablicy posłuży jako akumulator, skopiowana tablica [first, ..., half]!!!
             int indexLeft = 0;                                                         //Ponieważ mamy kopię tablicy to początek zawsze będzie od 0
