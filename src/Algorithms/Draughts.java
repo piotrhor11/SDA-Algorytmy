@@ -13,7 +13,7 @@ public class Draughts extends AbstractAlgorithm {
     @Override
     public void runAlgorithm(String[] input) {
 
-        List<String> colors = new ArrayList<String>();
+        List<String> colors = new ArrayList<>();
         colors.add("B");
         colors.add("C");
 
@@ -26,14 +26,12 @@ public class Draughts extends AbstractAlgorithm {
         int k = colors.indexOf(first);
 
         for (int i = 0; i < m; i++) {
-            if (i > 0 && n % 2 == 0) {                  //ToDo - paskudne rozwiązanie problemu z parzystą liczbą kolumn!!!
-                k++;
-            }
             for (int j = 0; j < n; j++) {
                 System.out.printf("%s ", colors.get((k) % colors.size()));
                 k++;
             }
             System.out.printf("\n");
+            k = (n % 2) == 0 ? k + 1 : k;           // W przypadku parzystej liczby kolumn przesuwamy indeks listy kolorów, żeby uzyskać "szachownicę"
         }
 
     }

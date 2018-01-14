@@ -22,18 +22,18 @@ public class Mode extends AbstractAlgorithm {
 
         int[] L = new int[max + 1];
 
-        for (int i = 0; i < T.length; i++) {
+        for (int i = 0; i < T.length; i++) {            // Indeks tablicy L będzie wartością z tablicy T, a wartość pod tym indeksem jest liczbą wystąpień.
             L[T[i]]++;
         }
 
-        int Lmax = 0;
+        int Lmax = 0;                                   // Szukamy indeksu z maksymalną wartością, czyli wartości z tabeli T z największą liczbą wystąpień
         for (int i = 1; i < L.length; i++) {
             if (L[i] > Lmax) {
                 Lmax = i;
             }
         }
 
-        System.out.printf("Największe liczba to %d, wustępuje %d razy ", Lmax, L[Lmax]);
+        System.out.printf("Największa liczba to %d, występuje %d razy ", Lmax, L[Lmax]);
 
     }
 }

@@ -40,8 +40,8 @@ public class AlgorithmFactory {
             case "mergesort":
                 return new MergeSort();             // EKSTRA: Merge Sort
             case "quicksort":
-                return new QuickSort();
-            //Zadania z listy z piątku 28.07.2017
+                return new QuickSort();             // EKSTRA: Quick Sort
+            // Zadania z listy z piątku 28.07.2017
             case "gtc":
                 return new GreatestCommonDivisor();
             case "draughts":
